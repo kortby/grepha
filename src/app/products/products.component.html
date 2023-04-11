@@ -1,0 +1,10 @@
+<app-banner></app-banner>
+<div>
+  <button mat-raised-button color="primary" (click)="addProduct()">
+    Add Pokemon
+  </button>
+</div>
+<div class="products-content" fxLayout="row wrap" fxLayoutAlign="space-evenly">
+  <app-product *ngFor="let product of products" [product]="product">
+  </app-product>
+</div>

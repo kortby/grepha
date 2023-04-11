@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "grepha-2bfb7": {
+      "hosting": {
+        "grepha": [
+          "grepha-2bfb7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "grepha-2bfb7"
+  }
+}

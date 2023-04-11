@@ -1,0 +1,21 @@
+<div fxFlex="60" fxLayoutAlign="space-around center">
+  <h1>Your Cart</h1>
+  <div class="cart-container">
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is currently empty.</p>
+    </div>
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.imageUrl" alt="Product image" />
+      <div class="item-details">
+        <p>{{ item.name }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <p>Price: {{ item.price | currency }}</p>
+        <button (click)="removeItem(item)">Remove</button>
+      </div>
+    </div>
+    <div *ngIf="cartItems.length > 0" class="cart-total">
+      <p>Total: {{ getTotal() | currency }}</p>
+      <button (click)="checkout()">Checkout</button>
+    </div>
+  </div>
+</div>

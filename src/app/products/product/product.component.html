@@ -1,0 +1,16 @@
+<mat-card class="card">
+  <img mat-card-image [src]="product.imageUrl" alt="Product Image" />
+  <mat-card-content>
+    <h2 mat-card-title>{{ product.name }}</h2>
+    <p mat-card-subtitle>{{ product.description }}</p>
+    <p>Price: {{ product.price | currency }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="addToCart(product)">
+      Add to cart
+    </button>
+    <a mat-button class="detail-link" routerLink="/product/{{ product.id }}">
+      <span>Details</span>
+    </a>
+  </mat-card-actions>
+</mat-card>
